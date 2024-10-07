@@ -1,3 +1,1 @@
-# CS50x
-
-This is cs50！
+# CS50x 2024
