@@ -1,0 +1,13 @@
+sort1 uses: bubble sort
+
+How do you know?:when the data is sorted,runtime is much less in comparison with random data and reversed data.
+
+
+sort2 uses: merge sort
+
+How do you know?:the runtime is usually less than the other 2 sort algorithm.
+
+
+sort3 uses: selection sort
+
+How do you know?:No matter the order of the data, the runtime remains the same.
