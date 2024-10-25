@@ -1,5 +1,4 @@
-# CS50x 2024
-# Week4
+# 关于Week4 problemset 的一些思考
 ## filters
 * 定义二维数组不可缺分号,以下为错误实例
 ```c
