@@ -13,12 +13,11 @@ def main():
     STRs = []
     database = []
     with open(sys.argv[1]) as csvfile:
-        reader = csv.DictReader(csvfile) # DAMN!NOT csv.Dictreader!
+        reader = csv.DictReader(csvfile)  # DAMN!NOT csv.Dictreader!
         for row in reader:
             database.append(row)
-        STRs = reader.fieldnames # notice that index 0 is "name"
+        STRs = reader.fieldnames  # notice that index 0 is "name"
         STRs.remove('name')
-
 
     # TODO: Read DNA sequence file into a variable
     sequence = ''
@@ -28,18 +27,17 @@ def main():
     # TODO: Find longest match of each STR in DNA sequence
     match_dict = {}
     for s in STRs:
-        match_dict[s] = longest_match(sequence,s)
+        match_dict[s] = longest_match(sequence, s)
 
     # TODO: Check database for matching profiles
-    for row in database: # returned row is a dict type
+    for row in database:  # returned row is a dict type
         # all() returns True if all elements of the iterable are true
         is_subset = all(int(row.get(key)) == value for key, value in match_dict.items())
         if is_subset:
             print(row['name'])
             break
-    else: # if no break in the loop
+    else:  # if no break in the loop
         print("No match")
-
 
     return
 
